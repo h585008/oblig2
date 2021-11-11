@@ -48,24 +48,23 @@ class StreamlitApp:
       #  if add_selectbox == 'Online': 
             
        
-        
-            OverallQual = st.number_input('OverallQual', min_value=1, max_value=10, value=5)
-            MSZoning = st.selectbox('MSZoning', ['A', 'C', 'FV', 'I', 'RH', 'RL', 'RP','RM'])
-            GrLivArea = st.number_input('GrLivArea', min_value=300, max_value=6000, value=1500)
-            OverallCond = st.number_input('OverallCond', min_value=1, max_value=9, value=5)            
-            GarageType = st.selectbox('GarageType', ['2Types', 'Attchd', 'Basment', 'BuiltIn', 'CarPort', 'Detchd', 'NA'])
-            LandSlope = st.selectbox('LandSlope', ['Gtl', 'Mod', 'Sev'])
-            FullBath = st.number_input('FullBath', min_value=0, max_value=5, value=0)  
-            Neighborhood = st.selectbox('Neighborhood', ['Blmngtn', 'Blueste', 'BrDale', 'BrkSide', 'ClearCr', 
+        OverallQual = st.number_input('OverallQual', min_value=1, max_value=10, value=5)
+        MSZoning = st.selectbox('MSZoning', ['A', 'C', 'FV', 'I', 'RH', 'RL', 'RP','RM'])
+        GrLivArea = st.number_input('GrLivArea', min_value=300, max_value=6000, value=1500)
+        OverallCond = st.number_input('OverallCond', min_value=1, max_value=9, value=5)           
+        GarageType = st.selectbox('GarageType', ['2Types', 'Attchd', 'Basment', 'BuiltIn', 'CarPort', 'Detchd', 'NA'])
+        LandSlope = st.selectbox('LandSlope', ['Gtl', 'Mod', 'Sev'])
+        FullBath = st.number_input('FullBath', min_value=0, max_value=5, value=0) 
+        Neighborhood = st.selectbox('Neighborhood', ['Blmngtn', 'Blueste', 'BrDale', 'BrkSide', 'ClearCr', 
                                                          'CollgCr', 'Crawfor', 'Edwards', 'Gilbert', 'IDOTRR', 
                                                          'MeadowV', 'Mitchel', 'Names','NoRidge', 'NPkVill', 
                                                          'NridgHt', 'NWAmes', 'OldTown','SWISU', 'Sawyer', 
                                                          'SawyerW', 'Somerst', 'StoneBr', 'Timber', 'Veenker', 'Up', 'Down'])
-            Functional = st.selectbox('Functional', ['Typ', 'Min1', 'Min2', 'Mod', 'Maj1', 'Maj2', 'Sev', 'Sal'])
+        Functional = st.selectbox('Functional', ['Typ', 'Min1', 'Min2', 'Mod', 'Maj1', 'Maj2', 'Sev', 'Sal'])
             
             
-            output=''
-            input_dict = {'OverallQual':OverallQual, 'MSZoning':MSZoning, 'GrLivArea':GrLivArea, 'OverallCond':OverallCond, 
+        output=''
+        input_dict = {'OverallQual':OverallQual, 'MSZoning':MSZoning, 'GrLivArea':GrLivArea, 'OverallCond':OverallCond, 
                           'GarageType':GarageType, 'LandSlope':LandSlope, 
                           'FullBath':FullBath, 'Neighborhood':Neighborhood, 'Functional':Functional, 'MSSubClass':0,
             'LotFrontage':0,
@@ -138,14 +137,14 @@ class StreamlitApp:
             'SaleType':"Null",
             'SaleCondition':"Null"}
             
-            input_df = pd.DataFrame(input_dict, index=[0])
+        input_df = pd.DataFrame(input_dict, index=[0])
         
-            if st.button('Predict'): 
-                output = self.predict(input_df)
-                self.store_prediction(output)
+        if st.button('Predict'):
+            output = self.predict(input_df)
+            self.store_prediction(output)
             
-            st.success('Predicted output: ')
-            st.write(output['Label']
+        st.success('Predicted output: ')
+        st.write(output['Label']
                      
 sa = StreamlitApp()
 sa.run()
