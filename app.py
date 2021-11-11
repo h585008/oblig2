@@ -65,9 +65,9 @@ class StreamlitApp:
                           'GarageYrBlt':0, 'GarageFinish':"Null",'GarageCars':0, 'GarageArea':0, 'GarageQual':"Null",'GarageCond':"Null",'PavedDrive':"Null",                           'WoodDeckSF':0,'OpenPorchSF':0,'EnclosedPorch':0,'3SsnPorch':0,'ScreenPorch':0,'PoolArea':0,'PoolQC':"Null",'Fence':"Null",
                           'MiscFeature':"Null",'MiscVal':0, 'MoSold':0, 'YrSold':0, 'SaleType':"Null",'SaleCondition':"Null"}
            
-             input_df = pd.DataFrame(input_dict, index=[0])
+            input_df = pd.DataFrame(input_dict, index=[0])
         
-             if st.button('Predict'): 
+            if st.button('Predict'): 
                 output = self.predict(input_df)
                 self.store_prediction(output)
                 
@@ -75,7 +75,7 @@ class StreamlitApp:
                 output = str(output['Label'])
                 
             
-             st.success('Predicted output: {}'.format(output))
+            st.success('Predicted output: {}'.format(output))
             
         if add_selectbox == 'Batch': 
             fn = st.file_uploader("Upload csv file for predictions") #st.file_uploader('Upload csv file for predictions, type=["csv"]')
