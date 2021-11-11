@@ -148,7 +148,8 @@ class StreamlitApp:
                 #output = str(output['Label'])
                 
             
-            st.success('Predicted output: {}'.format(output['Label']))
+            #st.success('Predicted output: {}'.format(output['Label']))
+            st.write(output['Label']
           
             
             
