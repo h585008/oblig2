@@ -147,15 +147,17 @@ class StreamlitApp:
                 #output = 'Heart disease' if output['Label'][0] == 1 else 'Normal'
                 #output = str(output['Label'])
                 
+            st.write(output)
+            #st.success('Predicted output: {}'.format(output))
+            st.write('Test')
             
-            st.success('Predicted output: {}'.format(output))
             
         if add_selectbox == 'Batch': 
             fn = st.file_uploader("Upload csv file for predictions") #st.file_uploader('Upload csv file for predictions, type=["csv"]')
             if fn is not None: 
                 input_df = pd.read_csv(fn)
                 predictions = self.predict(input_df)
-                st.write(predictions)
+                st.write(predictions['Label'])
             
 sa = StreamlitApp()
 sa.run()
