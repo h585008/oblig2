@@ -49,6 +49,9 @@ class StreamlitApp:
                                                          'NridgHt', 'NWAmes', 'OldTown','SWISU', 'Sawyer', 
                                                          'SawyerW', 'Somerst', 'StoneBr', 'Timber', 'Veenker', 'Up', 'Down'])
             Functional = st.selectbox('Functional', ['Typ', 'Min1', 'Min2', 'Mod', 'Maj1', 'Maj2', 'Sev', 'Sal'])
+            GarageCars =st.number_input('GarageCars', min_value=0.0, max_value=10.0, value=1.0)
+            GarageArea = st.number_input('GarageArea', min_value=0.0, max_value=2000.0, value=1000.0)
+            TotRmsAbvGrd = st.number_input('TotRmsAbvGrd', min_value=1.0, max_value=30.0, value=6.0)
             
             
             output=''
@@ -61,8 +64,8 @@ class StreamlitApp:
                           'ExterCond':"Null",'Foundation':"Null",'BsmtQual':"Null",'BsmtCond':"Null",'BsmtExposure':"Null",'BsmtFinType1':"Null",
                           'BsmtFinSF1':0,'BsmtFinType2':"Null",'BsmtFinSF2':0,'BsmtUnfSF':0,'TotalBsmtSF':0,'Heating':"Null",'HeatingQC':"Null", 
                           'CentralAir':"Null",'Electrical':"Null",'1stFlrSF':0, '2ndFlrSF':0,'LowQualFinSF':0,'BsmtFullBath':0,'BsmtHalfBath':0,
-                          'HalfBath':0,'BedroomAbvGr':0,'KitchenAbvGr':0,'KitchenQual':"Null",'TotRmsAbvGrd':0, 'Fireplaces':0,'FireplaceQu':"Null",
-                          'GarageYrBlt':0, 'GarageFinish':"Null",'GarageCars':0, 'GarageArea':0, 'GarageQual':"Null",'GarageCond':"Null",'PavedDrive':"Null",                           'WoodDeckSF':0,'OpenPorchSF':0,'EnclosedPorch':0,'3SsnPorch':0,'ScreenPorch':0,'PoolArea':0,'PoolQC':"Null",'Fence':"Null",
+                          'HalfBath':0,'BedroomAbvGr':0,'KitchenAbvGr':0,'KitchenQual':"Null",'TotRmsAbvGrd':TotRmsAbvGrd, 'Fireplaces':0,'FireplaceQu':"Null",
+                          'GarageYrBlt':0, 'GarageFinish':"Null",'GarageCars':GarageCars, 'GarageArea':GarageArea, 'GarageQual':"Null",'GarageCond':"Null",'PavedDrive':"Null",                           'WoodDeckSF':0,'OpenPorchSF':0,'EnclosedPorch':0,'3SsnPorch':0,'ScreenPorch':0,'PoolArea':0,'PoolQC':"Null",'Fence':"Null",
                           'MiscFeature':"Null",'MiscVal':0, 'MoSold':0, 'YrSold':0, 'SaleType':"Null",'SaleCondition':"Null"}
            
             input_df = pd.DataFrame(input_dict, index=[0])
