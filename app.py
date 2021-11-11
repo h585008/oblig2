@@ -39,13 +39,13 @@ class StreamlitApp:
         st.image(image, use_column_width=False)
     
     
-        add_selectbox = st.sidebar.selectbox('How would you like to predict?', ('Online')) 
+      #  add_selectbox = st.sidebar.selectbox('How would you like to predict?', ('Online')) 
         st.sidebar.info('This app is created to predict house prices' )
         st.sidebar.success('DAT158')
         st.title('House prices prediction')
         
        
-        if add_selectbox == 'Online': 
+      #  if add_selectbox == 'Online': 
             
        
         
@@ -143,16 +143,9 @@ class StreamlitApp:
             if st.button('Predict'): 
                 output = self.predict(input_df)
                 self.store_prediction(output)
-                
-                
-                
             
             st.success('Predicted output: ')
             st.write(output['Label']
-          
-            
+                     
 sa = StreamlitApp()
 sa.run()
-
-
-# In[ ]:
