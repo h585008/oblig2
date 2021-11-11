@@ -147,9 +147,9 @@ class StreamlitApp:
                 #output = 'Heart disease' if output['Label'][0] == 1 else 'Normal'
                 #output = str(output['Label'])
                 
-            st.write(output)
-            #st.success('Predicted output: {}'.format(output))
-            st.write('Test')
+            
+            st.success('Predicted output: {}'.format(output['Label']))
+          
             
             
         if add_selectbox == 'Batch': 
