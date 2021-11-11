@@ -64,7 +64,7 @@ class StreamlitApp:
                            'HalfBath':0,'BedroomAbvGr':0,'KitchenAbvGr':0,'KitchenQual':"Null",'TotRmsAbvGrd':0, 'Fireplaces':0,'FireplaceQu':"Null",
                            'GarageYrBlt':0, 'GarageFinish':"Null",'GarageCars':0, 'GarageArea':0, 'GarageQual':"Null",'GarageCond':"Null",'PavedDrive':"Null",
                            'WoodDeckSF':0,'OpenPorchSF':0,'EnclosedPorch':0,'3SsnPorch':0,'ScreenPorch':0,'PoolArea':0,'PoolQC':"Null",'Fence':"Null",
-                           'MiscFeature':"Null",'MiscVal':0, MoSold':0, 'YrSold':0, 'SaleType':"Null",'SaleCondition':"Null"}
+                           'MiscFeature':"Null",'MiscVal':0, 'MoSold':0, 'YrSold':0, 'SaleType':"Null",'SaleCondition':"Null"}
            
             input_df = pd.DataFrame(input_dict, index=[0])
         
