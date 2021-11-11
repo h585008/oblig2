@@ -39,7 +39,7 @@ class StreamlitApp:
         st.image(image, use_column_width=False)
     
     
-        add_selectbox = st.sidebar.selectbox('How would you like to predict?', ('Online', 'Batch')) 
+        add_selectbox = st.sidebar.selectbox('How would you like to predict?', ('Online')) 
         st.sidebar.info('This app is created to predict house prices' )
         st.sidebar.success('DAT158')
         st.title('House prices prediction')
@@ -152,14 +152,6 @@ class StreamlitApp:
             #st.success('Predicted output: {}'.format(output['Label']))
             
           
-            
-            
-        if add_selectbox == 'Batch': 
-            fn = st.file_uploader("Upload csv file for predictions") #st.file_uploader('Upload csv file for predictions, type=["csv"]')
-            if fn is not None: 
-                input_df = pd.read_csv(fn)
-                predictions = self.predict(input_df)
-                st.write(predictions['Label'])
             
 sa = StreamlitApp()
 sa.run()
