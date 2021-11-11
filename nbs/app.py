@@ -18,7 +18,7 @@ import os
 class StreamlitApp:
     
     def __init__(self):
-        self.model = load_model('../model/Final_Huber_Model_10Nov2021') 
+        self.model = load_model('model/Final_Huber_Model_10Nov2021') 
         self.save_fn = 'path.csv'     
         
     def predict(self, input_data): 
@@ -91,5 +91,5 @@ sa.run()
 # In[ ]:
 
 
-get_ipython().system('jupyter nbconvert --to script streamlit.ipynb')
+# get_ipython().system('jupyter nbconvert --to script streamlit.ipynb')
 
