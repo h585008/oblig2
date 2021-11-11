@@ -75,7 +75,7 @@ class StreamlitApp:
                 self.store_prediction(output)
                 
                
-                output = str(output['Label'][0])
+                output = output['Label'][0]
                 
             
             st.success('Predicted output: {}'.format(output))
