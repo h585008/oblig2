@@ -62,9 +62,9 @@ class StreamlitApp:
                            'BsmtFinSF1':0,'BsmtFinType2':"Null",'BsmtFinSF2':0,'BsmtUnfSF':0,'TotalBsmtSF':0,'Heating':"Null",'HeatingQC':"Null", 
                            'CentralAir':"Null",'Electrical':"Null",'1stFlrSF':0, '2ndFlrSF':0,'LowQualFinSF':0,'BsmtFullBath':0,'BsmtHalfBath':0,
                            'HalfBath':0,'BedroomAbvGr':0,'KitchenAbvGr':0,'KitchenQual':"Null",'TotRmsAbvGrd':0, 'Fireplaces':0,'FireplaceQu':"Null",
-                           'GarageYrBlt':0, 'GarageFinish':"Null",'GarageCars':0,'GarageArea':0,'GarageQual':"Null",'GarageCond':"Null",'PavedDrive':"Null",
+                           'GarageYrBlt':0, 'GarageFinish':"Null",'GarageCars':0, 'GarageArea':0, 'GarageQual':"Null",'GarageCond':"Null",'PavedDrive':"Null",
                            'WoodDeckSF':0,'OpenPorchSF':0,'EnclosedPorch':0,'3SsnPorch':0,'ScreenPorch':0,'PoolArea':0,'PoolQC':"Null",'Fence':"Null",
-                           'MiscFeature':"Null",'MiscVal':0,MoSold':0,'YrSold':0, 'SaleType':"Null",'SaleCondition':"Null"}
+                           'MiscFeature':"Null",'MiscVal':0, MoSold':0, 'YrSold':0, 'SaleType':"Null",'SaleCondition':"Null"}
            
             input_df = pd.DataFrame(input_dict, index=[0])
         
