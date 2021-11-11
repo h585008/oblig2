@@ -98,7 +98,7 @@ class StreamlitApp:
             'BsmtFinSF1':0,
             'BsmtFinType2':Null,
             'BsmtFinSF2':0,
-            'BsmtUnfSF'0,
+            'BsmtUnfSF':0,
             'TotalBsmtSF':0, 
             'Heating':Null,
             'HeatingQC':Null, 
