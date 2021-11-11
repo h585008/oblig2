@@ -143,14 +143,12 @@ class StreamlitApp:
             if st.button('Predict'): 
                 output = self.predict(input_df)
                 self.store_prediction(output)
-                st.write(output['Label']
                 
-                #output = 'Heart disease' if output['Label'][0] == 1 else 'Normal'
-                #output = str(output['Label'])
+                
                 
             
-            #st.success('Predicted output: {}'.format(output['Label']))
-            
+            st.success('Predicted output: ')
+            st.write(output['Label']
           
             
 sa = StreamlitApp()
