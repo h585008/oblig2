@@ -53,7 +53,8 @@ class StreamlitApp:
             GarageArea = st.number_input('GarageArea', min_value=0.0, max_value=2000.0, value=1000.0)
             TotRmsAbvGrd = st.number_input('TotRmsAbvGrd', min_value=1.0, max_value=30.0, value=6.0)
             Fireplaces = st.number_input('Fireplaces', min_value=1.0, max_value=5.0, value=1.0)
-            YearBuilt = st.number_input('YearBuilt', min_value=1800.0, max_value=2021.0, value=1980,0)
+            YearBuilt = st.number_input('YearBuilt', min_value=1800.0, max_value=2021.0, value=1980.0)
+            PoolArea = st.number_input('PoolArea', min_value=0.0, max_value=1000.0, value=500.0)
             
             
             output=''
@@ -67,7 +68,8 @@ class StreamlitApp:
                           'BsmtFinSF1':0,'BsmtFinType2':"Null",'BsmtFinSF2':0,'BsmtUnfSF':0,'TotalBsmtSF':0,'Heating':"Null",'HeatingQC':"Null", 
                           'CentralAir':"Null",'Electrical':"Null",'1stFlrSF':0, '2ndFlrSF':0,'LowQualFinSF':0,'BsmtFullBath':0,'BsmtHalfBath':0,
                           'HalfBath':0,'BedroomAbvGr':0,'KitchenAbvGr':0,'KitchenQual':"Null",'TotRmsAbvGrd':TotRmsAbvGrd, 'Fireplaces':Fireplaces,'FireplaceQu':"Null",
-                          'GarageYrBlt':0, 'GarageFinish':"Null",'GarageCars':GarageCars, 'GarageArea':GarageArea, 'GarageQual':"Null",'GarageCond':"Null",'PavedDrive':"Null",                           'WoodDeckSF':0,'OpenPorchSF':0,'EnclosedPorch':0,'3SsnPorch':0,'ScreenPorch':0,'PoolArea':0,'PoolQC':"Null",'Fence':"Null",
+                          'GarageYrBlt':0, 'GarageFinish':"Null",'GarageCars':GarageCars, 'GarageArea':GarageArea, 'GarageQual':"Null",'GarageCond':"Null",'PavedDrive':"Null",
+                          'WoodDeckSF':0,'OpenPorchSF':0,'EnclosedPorch':0,'3SsnPorch':0,'ScreenPorch':0,'PoolArea':PoolArea,'PoolQC':"Null",'Fence':"Null",
                           'MiscFeature':"Null",'MiscVal':0, 'MoSold':0, 'YrSold':0, 'SaleType':"Null",'SaleCondition':"Null"}
            
             input_df = pd.DataFrame(input_dict, index=[0])
