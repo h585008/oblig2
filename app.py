@@ -78,7 +78,7 @@ class StreamlitApp:
                 output = output['Label'][0]
                 
             
-            st.success('Predicted output: {}'.format(output))
+            st.success('Predicted output: ${}'.format(output))
             
         if add_selectbox == 'Batch': 
             fn = st.file_uploader("Upload csv file for predictions") #st.file_uploader('Upload csv file for predictions, type=["csv"]')
