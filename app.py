@@ -74,7 +74,7 @@ class StreamlitApp:
             RoofStyle=st.selectbox('RoofStyle', ['Flat', 'Gabel', 'Gambrel', 'Hip', 'Mansard', 'Shed'])
             RoofMatl=st.selectbox('RoofMatl', ['ClyTile', 'CompShg', 'Membran', 'Metal', 'Roll', 'Tar&Grv', 'WdShake', 'WdShngl'])
             Exterior1st=st.selectbox('Exterior1st', ['AsbShng', 'AsphShn', 'BrkComm', 'BrkFace', 'CBlock', 'CemntBd', 'HdBoard', 'ImStucc', 'MetalSd', 'Other', 'Plywood', 'PreCast', 'Stone', 'Stucco','VinylSd','Wd Sdng', 'WdShing'])
-            Exterior2st=st.selectbox('Exterior1st', ['AsbShng', 'AsphShn', 'BrkComm', 'BrkFace', 'CBlock', 'CemntBd', 'HdBoard', 'ImStucc', 'MetalSd', 'Other', 'Plywood', 'PreCast', 'Stone', 'Stucco','VinylSd','Wd Sdng', 'WdShing'])
+            Exterior2st=st.selectbox('Exterior2st', ['AsbShng', 'AsphShn', 'BrkComm', 'BrkFace', 'CBlock', 'CemntBd', 'HdBoard', 'ImStucc', 'MetalSd', 'Other', 'Plywood', 'PreCast', 'Stone', 'Stucco','VinylSd','Wd Sdng', 'WdShing'])
             MasVnrType = st.selectbox('MasVnrType', ['BrkCmn', 'BrkFace', 'CBlock', 'None', 'Stone'])
             MasVnrArea=st.number_input('MasVnrArea', min_value=0.0, value=100.0)
             ExterQual=st.selectbox('ExterQual', ['Ex', 'Gd', 'TA', 'Fa', 'Po'])
