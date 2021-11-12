@@ -98,7 +98,7 @@ class StreamlitApp:
             MiscVal=st.number_input('MiscVal', min_value=0, max_value=15500, value=5000)
             MiscFeature=st.selectbox('MiscFeature', ['Elev', 'Gar2', 'Othr', 'Shed', 'TenC', 'NA'])
             ScreenPorch=st.number_input('ScreenPorch', min_value=0, max_value=1000, value=250)
-            3SsnPorch=st.number_input('3SsnPorch', min_value=0, max_value=1000, value=250)
+            SsnPorch=st.number_input('3SsnPorch', min_value=0, max_value=1000, value=250)
             EnclosedPorch=st.number_input('EnclosedPorch', min_value=0, max_value=1000, value=250)
             OpenPorchSF=st.number_input('OpenPorchSF', min_value=0, max_value=1000, value=250)
             WoodDeckSF=st.number_input('WoodDeckSF', min_value=0, max_value=1000, value=250)
@@ -115,8 +115,8 @@ class StreamlitApp:
             BsmtHalfBath=st.number_input('BsmtHalfBath', min_value=0, max_value=10, value=1)
             BsmtFullBath=st.number_input('BsmtFullBath', min_value=0, max_value=10, value=1)
             LowQualFinSF=st.number_input('LowQualFinSF', min_value=0, max_value=1000, value=5)
-            2ndFlrSF=st.number_input('2ndFlrSF', min_value=0, max_value=3000, value=300)
-            1stFlrSF=st.number_input('1stFlrSF', min_value=100, max_value=6000, value=400)
+            TwondFlrSF=st.number_input('2ndFlrSF', min_value=0, max_value=3000, value=300)
+            OnestFlrSF=st.number_input('1stFlrSF', min_value=100, max_value=6000, value=400)
             Electrical=st.selectbox('Electrical', ['SBrkr', 'FuseA', 'FuseF', 'FuseP', 'Mix'])
             CentralAir=st.selectbox('CentralAir', ['N', 'Y'])
          
@@ -131,10 +131,10 @@ class StreamlitApp:
                           'RoofMatl':RoofMatl,'Exterior1st':Exterior1st ,'Exterior2nd':Exterior2nd,'MasVnrType':MasVnrType,'MasVnrArea':MasVnrArea,'ExterQual':ExterQual,
                           'ExterCond':ExterCond,'Foundation':Foundation,'BsmtQual':BsmtQual,'BsmtCond':BsmtCond,'BsmtExposure':BsmtExposure,'BsmtFinType1':BsmtFinType1,
                           'BsmtFinSF1':BsmtFinSF1,'BsmtFinType2':BsmtFinType2,'BsmtFinSF2':BsmtFinSF2,'BsmtUnfSF':BsmtUnfSF,'TotalBsmtSF':TotalBsmtSF,'Heating':Heating,'HeatingQC':HeatingQC, 
-                          'CentralAir':CentralAir,'Electrical':Electrical,'1stFlrSF':1stFlrSF, '2ndFlrSF':2ndFlrSF,'LowQualFinSF':LowQualFinSF,'BsmtFullBath':BsmtFullBath,'BsmtHalfBath':BsmtHalfBath,
+                          'CentralAir':CentralAir,'Electrical':Electrical,'1stFlrSF':OnestFlrSF, '2ndFlrSF':TwondFlrSF,'LowQualFinSF':LowQualFinSF,'BsmtFullBath':BsmtFullBath,'BsmtHalfBath':BsmtHalfBath,
                           'HalfBath':HalfBath,'BedroomAbvGr':BedroomAbvGr,'KitchenAbvGr':KitchenAbvGr,'KitchenQual':KitchenQual,'TotRmsAbvGrd':TotRmsAbvGrd, 'Fireplaces':Fireplaces,'FireplaceQu':FireplaceQu,
                           'GarageYrBlt':GarageYrBlt, 'GarageFinish':GarageFinish,'GarageCars':GarageCars, 'GarageArea':GarageArea, 'GarageQual':GarageQual,'GarageCond':GarageCond,'PavedDrive':PavedDrive,
-                          'WoodDeckSF':WoodDeckSF,'OpenPorchSF':OpenPorchSF,'EnclosedPorch':EnclosedPorch,'3SsnPorch':3SsnPorch,'ScreenPorch':ScreenPorch,'PoolArea':PoolArea,'PoolQC':PoolQC,'Fence':Fence,
+                          'WoodDeckSF':WoodDeckSF,'OpenPorchSF':OpenPorchSF,'EnclosedPorch':EnclosedPorch,'3SsnPorch':SsnPorch,'ScreenPorch':ScreenPorch,'PoolArea':PoolArea,'PoolQC':PoolQC,'Fence':Fence,
                           'MiscFeature':MiscFeature,'MiscVal':MiscVal, 'MoSold':MoSold, 'YrSold':YrSold, 'SaleType':SaleType,'SaleCondition':SaleCondition}
            
             input_df = pd.DataFrame(input_dict, index=[0])
