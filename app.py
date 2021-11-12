@@ -58,23 +58,84 @@ class StreamlitApp:
             PoolQC=st.selectbox('PoolQC', ['Gd', 'TA', 'Fa', 'NA'])
             Fence = st.selectbox('Fence', ['MnPrv', 'GdWo', 'MnWw', 'NA'])
             Utilities=st.selectbox('Utilities', ['AllPub','NoSewr', 'NoSeWa', 'ELO'])
+            MSSubClass=st.selectbox('MSSubClass', [20,30,40,45,50,60,70,75,80,85,90,120,150,160,180,190])
+            LotFrontage=st.number_input('LotFrontage', min_value=0.0, max_value=400.0, value=100.0)
+            LotArea=st.number_input('LotArea', min_value=0.0, max_value=30000.0, value=10000.0)
+            Street=st.selectbox('Street', ['Grvl','Pave'])
+            Alley=st.selectbox('Alley', ['Grvl', 'Pave', 'NA'])
+            LotShape=st.selectbox('LotShape', ['Reg', 'IR1', 'IR2', 'IR3'])
+            LandContour=st.selectbox('LandContour', ['Lvl', 'Bnk', 'HLS', 'Low'])
+            LotConfig=st.selectbox('LotConfig', ['Inside', 'Corner', 'CulDSac', 'FR2', 'FR3'])
+            Condition1=st.selectbox('Condition1', ['Artery', 'Feedr', 'Norm', 'RRNn', 'RRAn', 'PosN', 'PosA', 'RRNe', 'RRAe'])
+            Condition2=st.selectbox('Condition2', ['Artery', 'Feedr', 'Norm', 'RRNn', 'RRAn', 'PosN', 'PosA', 'RRNe', 'RRAe'])
+            BldgType=st.selectbox('BldgType', ['1Fam', '2FmCon', 'Duplx', 'TwnhsE', 'TwnhsI'])
+            HouseStyle=st.selectbox('HouseStyle', ['1Story', '1 .5Fin', '1 .5Unf', '2Story', '2 .5Fin', '2 .5Unf', 'SFoyer', 'SLvl'])
+            YearRemodAdd=st.number_input('YearRemodAdd', min_value=1800.0, max_value=2021.0, value=1980.0)
+            RoofStyle=st.selectbox('RoofStyle', ['Flat', 'Gabel', 'Gambrel', 'Hip', 'Mansard', 'Shed'])
+            RoofMatl=st.selectbox('RoofMatl', ['ClyTile', 'CompShg', 'Membran', 'Metal', 'Roll', 'Tar&Grv', 'WdShake', 'WdShngl'])
+            Exterior1st=st.selectbox('Exterior1st', ['AsbShng', 'AsphShn', 'BrkComm', 'BrkFace', 'CBlock', 'CemntBd', 'HdBoard', 'ImStucc', 'MetalSd', 'Other', 'Plywood', 'PreCast', 'Stone', 'Stucco','VinylSd','Wd Sdng', 'WdShing'])
+            Exterior2st=st.selectbox('Exterior1st', ['AsbShng', 'AsphShn', 'BrkComm', 'BrkFace', 'CBlock', 'CemntBd', 'HdBoard', 'ImStucc', 'MetalSd', 'Other', 'Plywood', 'PreCast', 'Stone', 'Stucco','VinylSd','Wd Sdng', 'WdShing'])
+            MasVnrType = st.selectbox('MasVnrType', ['BrkCmn', 'BrkFace', 'CBlock', 'None', 'Stone'])
+            MasVnrArea=st.number_input('MasVnrArea', min_value=0.0, value=100.0)
+            ExterQual=st.selectbox('ExterQual', ['Ex', 'Gd', 'TA', 'Fa', 'Po'])
+            ExterCond=st.selectbox('ExterCond', ['Ex', 'Gd', 'TA', 'Fa', 'Po'])
+            Foundation=st.selectbox('Foundation', ['BrkTil', 'CBlock', 'PConc', 'Slab', 'Stone', 'Wood'])
+            BsmtQual=st.selectbox('BsmtQual', ['Ex', 'Gd', 'TA', 'Fa', 'Po', 'NA'])
+            BsmtCond=st.selectbox('BsmtCond', ['Ex', 'Gd', 'TA', 'Fa', 'Po', 'NA'])
+            BsmtExposure=st.selectbox('BsmtExposure', ['Gd', 'Av', 'Mn', 'No', 'NA'])
+            BsmtFinType1=st.selectbox('BsmtFinType1', ['GLQ', 'ALQ', 'BLQ', 'Rec', 'LwQ', 'Unf', 'NA'])
+            BsmtFinSF1 = st.number_input('BsmtFinSF1', min_value=0.0, max_value=6000.0, value=500.0)
+            BsmtFinType2 = st.selectbox('BsmtFinType2', ['GLQ', 'ALQ', 'BLQ', 'Rec', 'LwQ', 'Unf', 'NA'])
+            BsmtFinSF2 = st.number_input('BsmtFinSF2', min_value=0.0, max_value=6000.0, value=500.0)
+            BsmtUnfSF =st.number_input('BsmtUnfSF', min_value=0.0, max_value=3000.0, value=500.0)
+            TotalBsmtSF = st.number_input('TotalBsmtSF', min_value=0.0, max_value=7000.0, value=1000.0)
+            Heating = st.selectbox('Heating', ['Floor','GasA','GasW ','Grav','OthW','Wall'])
+            HeatingQC = st.selectbox('HeatingQC', ['Ex', 'Gd', 'TA', 'Fa', 'Po'])
+            SaleCondition=st.selectbox('SaleCondition', ['Normal', 'Abnormal', 'AdjLand', 'Alloca', 'Family', 'Partial'])
+            SaleType=st.selectbox('SaleType', ['WD', 'CWD', 'VWD', 'New', 'COD', 'Con', 'ConLw', 'ConLI', 'ConLD', 'Oth'])
+            YrSold=st.number_input('YrSold', min_value=1950, max_value=2050, value=2010)
+            MoSold=st.selectbox('MoSold', [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+            MiscVal=st.number_input('MiscVal', min_value=0, max_value=15500, value=5000)
+            MiscFeature=st.selectbox('MiscFeature', ['Elev', 'Gar2', 'Othr', 'Shed', 'TenC', 'NA'])
+            ScreenPorch=st.number_input('ScreenPorch', min_value=0, max_value=1000, value=250)
+            3SsnPorch=st.number_input('3SsnPorch', min_value=0, max_value=1000, value=250)
+            EnclosedPorch=st.number_input('EnclosedPorch', min_value=0, max_value=1000, value=250)
+            OpenPorchSF=st.number_input('OpenPorchSF', min_value=0, max_value=1000, value=250)
+            WoodDeckSF=st.number_input('WoodDeckSF', min_value=0, max_value=1000, value=250)
+            PavedDrive=st.selectbox('PavedDrive', ['Y', 'P', 'N'])
+            GarageCond=st.selectbox('GarageCond', ['Ex', 'Gd', 'TA', 'Fa', 'Po', 'NA'])
+            GarageQual=st.selectbox('GarageQual', ['Ex', 'Gd', 'TA', 'Fa', 'Po', 'NA'])
+            GarageFinish=st.selectbox('GarageFinish', ['Fin', 'RFn', 'Unf', 'NA'])
+            GarageYrBlt=st.number_input('GarageYrBlt', min_value=1900, max_value=2050, value=1980)
+            FireplaceQu=st.selectbox('FireplaceQu', ['Ex', 'Gd', 'TA', 'Fa', 'Po', 'NA'])
+            KitchenQual=st.selectbox('KitchenQual', ['Ex', 'Gd', 'TA', 'Fa', 'Po', 'NA'])
+            KitchenAbvGr=st.number_input('KitchenAbvGr', min_value=0, max_value=10, value=2)
+            BedroomAbvGr=st.number_input('BedroomAbvGr', min_value=0, max_value=20, value=4)
+            HalfBath=st.number_input('HalfBath', min_value=0, max_value=10, value=2)
+            BsmtHalfBath=st.number_input('BsmtHalfBath', min_value=0, max_value=10, value=1)
+            BsmtFullBath=st.number_input('BsmtFullBath', min_value=0, max_value=10, value=1)
+            LowQualFinSF=st.number_input('LowQualFinSF', min_value=0, max_value=1000, value=5)
+            2ndFlrSF=st.number_input('2ndFlrSF', min_value=0, max_value=3000, value=300)
+            1stFlrSF=st.number_input('1stFlrSF', min_value=100, max_value=6000, value=400)
+            Electrical=st.selectbox('Electrical', ['SBrkr', 'FuseA', 'FuseF', 'FuseP', 'Mix'])
+            CentralAir=st.selectbox('CentralAir', ['N', 'Y'])
          
             
             
             output=''
             input_dict = {'OverallQual':OverallQual, 'MSZoning':MSZoning, 'GrLivArea':GrLivArea, 'OverallCond':OverallCond, 
                           'GarageType':GarageType, 'LandSlope':LandSlope, 'FullBath':FullBath, 'Neighborhood':Neighborhood, 
-                          'Functional':Functional, 'MSSubClass':0, 'LotFrontage':0, 'LotArea':0, 'Street':"Null",'Alley':"Null",
-                          'LotShape':"Null",'LandContour':"Null",'Utilities':Utilities,'LotConfig':"Null",'Condition1': "Null",
-                          'Condition2': "Null",'BldgType':"Null",'HouseStyle':"Null",'YearBuilt':YearBuilt,'YearRemodAdd':0,'RoofStyle':"Null",
-                          'RoofMatl':"Null",'Exterior1st':"Null",'Exterior2nd':"Null",'MasVnrType':"Null",'MasVnrArea':0,'ExterQual':"Null",
-                          'ExterCond':"Null",'Foundation':"Null",'BsmtQual':"Null",'BsmtCond':"Null",'BsmtExposure':"Null",'BsmtFinType1':"Null",
-                          'BsmtFinSF1':0,'BsmtFinType2':"Null",'BsmtFinSF2':0,'BsmtUnfSF':0,'TotalBsmtSF':0,'Heating':"Null",'HeatingQC':"Null", 
-                          'CentralAir':"Null",'Electrical':"Null",'1stFlrSF':0, '2ndFlrSF':0,'LowQualFinSF':0,'BsmtFullBath':0,'BsmtHalfBath':0,
-                          'HalfBath':0,'BedroomAbvGr':0,'KitchenAbvGr':0,'KitchenQual':"Null",'TotRmsAbvGrd':TotRmsAbvGrd, 'Fireplaces':Fireplaces,'FireplaceQu':"Null",
-                          'GarageYrBlt':0, 'GarageFinish':"Null",'GarageCars':GarageCars, 'GarageArea':GarageArea, 'GarageQual':"Null",'GarageCond':"Null",'PavedDrive':"Null",
-                          'WoodDeckSF':0,'OpenPorchSF':0,'EnclosedPorch':0,'3SsnPorch':0,'ScreenPorch':0,'PoolArea':PoolArea,'PoolQC':PoolQC,'Fence':Fence,
-                          'MiscFeature':"Null",'MiscVal':0, 'MoSold':0, 'YrSold':0, 'SaleType':"Null",'SaleCondition':"Null"}
+                          'Functional':Functional, 'MSSubClass':MSSubClass, 'LotFrontage':LotFrontage, 'LotArea':LotArea, 'Street':Street,'Alley':Alley,
+                          'LotShape':LotShape,'LandContour':LandContour,'Utilities':Utilities,'LotConfig':LotConfig,'Condition1': Condition1,
+                          'Condition2': Condition2,'BldgType':BldgType,'HouseStyle':HouseStyle,'YearBuilt':YearBuilt,'YearRemodAdd':YearRemodAdd,'RoofStyle':RoofStyle,
+                          'RoofMatl':RoofMatl,'Exterior1st':Exterior1st ,'Exterior2nd':Exterior2nd,'MasVnrType':MasVnrType,'MasVnrArea':MasVnrArea,'ExterQual':ExterQual,
+                          'ExterCond':ExterCond,'Foundation':Foundation,'BsmtQual':BsmtQual,'BsmtCond':BsmtCond,'BsmtExposure':BsmtExposure,'BsmtFinType1':BsmtFinType1,
+                          'BsmtFinSF1':BsmtFinSF1,'BsmtFinType2':BsmtFinType2,'BsmtFinSF2':BsmtFinSF2,'BsmtUnfSF':BsmtUnfSF,'TotalBsmtSF':TotalBsmtSF,'Heating':Heating,'HeatingQC':HeatingQC, 
+                          'CentralAir':CentralAir,'Electrical':Electrical,'1stFlrSF':1stFlrSF, '2ndFlrSF':2ndFlrSF,'LowQualFinSF':LowQualFinSF,'BsmtFullBath':BsmtFullBath,'BsmtHalfBath':BsmtHalfBath,
+                          'HalfBath':HalfBath,'BedroomAbvGr':BedroomAbvGr,'KitchenAbvGr':KitchenAbvGr,'KitchenQual':KitchenQual,'TotRmsAbvGrd':TotRmsAbvGrd, 'Fireplaces':Fireplaces,'FireplaceQu':FireplaceQu,
+                          'GarageYrBlt':GarageYrBlt, 'GarageFinish':GarageFinish,'GarageCars':GarageCars, 'GarageArea':GarageArea, 'GarageQual':GarageQual,'GarageCond':GarageCond,'PavedDrive':PavedDrive,
+                          'WoodDeckSF':WoodDeckSF,'OpenPorchSF':OpenPorchSF,'EnclosedPorch':EnclosedPorch,'3SsnPorch':3SsnPorch,'ScreenPorch':ScreenPorch,'PoolArea':PoolArea,'PoolQC':PoolQC,'Fence':Fence,
+                          'MiscFeature':MiscFeature,'MiscVal':MiscVal, 'MoSold':MoSold, 'YrSold':YrSold, 'SaleType':SaleType,'SaleCondition':SaleCondition}
            
             input_df = pd.DataFrame(input_dict, index=[0])
         
